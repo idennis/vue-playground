@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+
+  <body>
+    <div id="app">
+      <div class="chapter">
+        <h3>1</h3>
+        <span> Hello {{ username }}! </span>
+      </div>
+      <div class="chapter">
+        <h3>2</h3>
+        <span v-bind:title="message">
+          Hover your mouse over me for a few seconds
+          to see my dynamically bound title!
+        </span>
+      </div>
+      <div class="chapter">
+        <h3>3</h3>
+        <span v-if="seen">Now you see me</span>
+      </div>
+      <div class="chapter">
+        <h3>4</h3>
+        <ul>
+          <li v-for="todo in todos">{{ todo.name }}</li>
+        </ul>
+        <span>app.todos.push({ text: 'New item' })</span>
+      </div>
+    </div>
+  </body>
+
+</html>
