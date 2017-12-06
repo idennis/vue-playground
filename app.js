@@ -10,6 +10,11 @@ window.onload = function () {
         { name: 'get prescription' },
         { name: 'meet mum' },
       ]
-    }
+    },
+    methods: {
+      reverseMessage: function(){
+        this.message = this.message.split('').reverse().join('');
+      }
+    },
   })
 };
